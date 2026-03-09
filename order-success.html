@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order Confirmed – AVG AUTO</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<style>
+.success-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;text-align:center}
+.success-box{max-width:560px;width:100%}
+.success-icon{font-size:72px;margin-bottom:20px;animation:pop .5s cubic-bezier(.175,.885,.32,1.275) both}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.success-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,7vw,64px);font-weight:900;text-transform:uppercase;line-height:.9;margin-bottom:12px}
+.success-title span{color:var(--yellow)}
+.success-sub{font-size:15px;color:var(--grey);margin-bottom:32px;line-height:1.7}
+.order-id{background:var(--dark2);border:1px solid var(--border);padding:14px 20px;font-family:'Barlow Condensed',sans-serif;font-size:14px;color:var(--grey);margin-bottom:28px;letter-spacing:1px}
+.order-id strong{color:var(--yellow);font-size:20px}
+.order-details-box{background:var(--dark2);border:1px solid var(--border);padding:20px;text-align:left;margin-bottom:28px;max-height:280px;overflow-y:auto}
+.od-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.od-row:last-child{border:none}
+.od-label{color:var(--grey);flex-shrink:0}
+.od-val{color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;text-align:right}
+.notify-box{background:rgba(26,59,140,.1);border:1px solid rgba(26,59,140,.3);padding:16px 20px;margin-bottom:28px;text-align:left}
+.notify-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue-light);margin-bottom:10px}
+.notify-row{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--grey);margin-bottom:8px}
+.notify-row:last-child{margin-bottom:0}
+.notify-dot{width:8px;height:8px;background:var(--blue-light);border-radius:50%;flex-shrink:0}
+.success-acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+</style>
+</head>
+<body>
+
+<div class="announce">🎉 Order Placed Successfully! &nbsp;·&nbsp; <a href="tel:+919860342277">Questions? Call: 098603 42277</a></div>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">AVG AUTO</div>
+    <div class="logo-sub">Motor Oils<br>&amp; Additives</div>
+  </a>
+  <ul class="desktop-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hdr-right">
+    <a href="tel:+919860342277" class="hdr-phone">📞 098603 42277</a>
+    <a href="cart.html" class="btn-shop">🛒 Cart (<span class="cart-count">0</span>)</a>
+    <button class="hamburger" id="ham" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mob-nav" id="mob-nav">
+  <a href="index.html">🏠 Home</a>
+  <a href="shop.html">🛢️ Shop</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📍 Contact</a>
+  <a href="tel:+919860342277" class="mob-nav-phone">📞 098603 42277</a>
+  <a href="cart.html" class="mob-nav-cta">🛒 Cart (<span class="cart-count">0</span>)</a>
+</nav>
+
+<main>
+<div class="success-wrap">
+  <div class="success-box fade-up">
+    <div class="success-icon">✅</div>
+    <h1 class="success-title">Order <span>Confirmed!</span></h1>
+    <p class="success-sub" id="successSub">Thank you for your order. We've received your payment and will process your order right away.</p>
+
+    <div class="order-id">
+      Order ID: <strong id="displayOrderId">—</strong>
+    </div>
+
+    <div class="order-details-box" id="orderDetailsBox" style="display:none">
+      <div id="orderDetailRows"></div>
+    </div>
+
+    <div class="notify-box">
+      <div class="notify-title">📬 What Happens Next</div>
+      <div class="notify-row"><div class="notify-dot"></div><span>You'll receive a WhatsApp confirmation from us shortly</span></div>
+      <div class="notify-row"><div class="notify-dot"></div><span>We'll call you on your number to confirm delivery slot</span></div>
+      <div class="notify-row"><div class="notify-dot"></div><span>Delivery within Lohegaon: Same day · Wider Pune: Next day</span></div>
+      <div class="notify-row"><div class="notify-dot"></div><span>Questions? Call or WhatsApp: <a href="tel:+919860342277" style="color:var(--yellow)">098603 42277</a></span></div>
+    </div>
+
+    <div class="success-acts">
+      <a href="shop.html" class="btn-pri">Shop More →</a>
+      <a href="https://wa.me/919860342277" target="_blank" class="btn-out">💬 WhatsApp Us</a>
+      <a href="index.html" class="btn-out">← Home</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">AVG AUTO</div><p class="footer-desc">All Your Car &amp; Bike Needs Under One Roof.</p><div class="footer-info"><div class="footer-info-row"><i>📍</i><span>Porwal Rd, Lohegaon, Pune – 411015</span></div><div class="footer-info-row"><i>📞</i><a href="tel:+919860342277">098603 42277</a></div></div></div>
+    <div class="footer-col"><h4>Shop</h4><ul class="footer-links"><li><a href="shop.html#motor-oils">Motor Oils</a></li><li><a href="shop.html#additives">Additives</a></li><li><a href="shop.html#bike-oils">Bike Oils</a></li></ul></div>
+    <div class="footer-col"><h4>Info</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Brands</h4><ul class="footer-links"><li><a href="shop.html">LIQUI MOLY</a></li><li><a href="shop.html">Castrol</a></li><li><a href="shop.html">Shell Helix</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 AVG AUTO, Pune. All rights reserved.</span></div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919860342277" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="main.js"></script>
+<script>
+// Load order data from session
+const orderData = JSON.parse(sessionStorage.getItem('avg_last_order') || 'null');
+
+if (orderData) {
+  document.getElementById('displayOrderId').textContent = orderData.orderId;
+  document.getElementById('successSub').textContent =
+    `Thank you ${orderData.name}! Payment of ₹${orderData.total.toLocaleString('en-IN')} received. We will contact you on ${orderData.phone} to confirm your delivery.`;
+
+  const rows = [
+    ['Customer', orderData.name],
+    ['Phone', orderData.phone],
+    ['Email', orderData.email],
+    ['Address', orderData.address + ', Pune ' + orderData.pincode],
+    ['Items', orderData.cart.map(i => i.name + ' ×' + i.qty).join(', ')],
+    ['Total Paid', '₹' + orderData.total.toLocaleString('en-IN')],
+    ['Payment ID', orderData.paymentId || 'Via WhatsApp']
+  ];
+
+  document.getElementById('orderDetailRows').innerHTML = rows.map(([l,v]) =>
+    `<div class="od-row"><span class="od-label">${l}</span><span class="od-val">${v}</span></div>`
+  ).join('');
+  document.getElementById('orderDetailsBox').style.display = 'block';
+} else {
+  document.getElementById('displayOrderId').textContent = 'Check your WhatsApp';
+}
+</script>
+</body>
+</html>
